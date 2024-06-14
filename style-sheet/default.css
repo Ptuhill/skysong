@@ -65,39 +65,10 @@ a:hover {
 .paddingright{	padding-right:7px;}
 .clerfix{ clear:both; display:block; content:".";}
 
-#header {
-	width:100%;
-	
-	margin: 0 auto;
-}
-
-
-#search{ float:right;
-		 padding:20px 0px 0px 0px;
-			
-			}
-			
-#search .icon{ float:right;
-		 padding:15px 10px 0px 0px;
-		 width:32px;
-		 height:32px;
-		 margin-left:15px;
-		 cursor:pointer;
-		 background:url(../images/Search-icon.png) no-repeat;
-			
-			}			
-			
-.search-input{	width:176px;
-				height:33px;
-				float:right;
-				background:url(../images/srch.gif) no-repeat right;
-				border:none;
-				color:#FFFFFF;}			
-
 #logo {
 	float: left;
 	width: 0px;
-	background:url(../images/logo.png) no-repeat left;
+	background:url(../images/logo2.png) no-repeat left;
 	width: 226px;
 	height: 76px;
 }

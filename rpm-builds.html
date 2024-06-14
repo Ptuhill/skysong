@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>skysong.co.uk - RPM Builds</title>
+<meta name="keywords" content="skysong open source RPM Builds" />
+<meta name="description" content="Skysong.co.uk home of the skysong RPM RPM Builds" />
+<link href="style-sheet/default.css" rel="stylesheet" type="text/css" />
+
+
+
+<!--slider-->
+        <link rel="stylesheet" href="style-sheet/nivo-slider.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="style-sheet/navo.css" type="text/css" media="screen" />
+       <script type="text/javascript" src="js/jquery-1.4.3.min.js"></script>
+    <script type="text/javascript" src="js/jquery.nivo.slider.pack.js"></script>
+    <script type="text/javascript">
+    $(window).load(function() {
+        $('#slider').nivoSlider();
+    });
+    </script>
+
+
+
+
+</head>
+<body>
+
+<div id="wrapper">
+
+<div id="header">
+
+<div id="logo"></div>
+	
+	<div id="menu">
+  
+		
+		<ul>
+			<li><a href="index.html"><span>Home</span></a></li>
+			<li><a href="products.html">Products</a></li>
+			<li><a href="services.html">Services</a></li>
+			<li><a href="software.html">Software</a></li>
+			<li><a href="repository.html">Repository</a></li>
+			<li><a href="#" class="active">About us</a></li>
+			<li><a href="contact.html">Contact</a></li>
+		</ul>
+	</div>
+</div>
+
+<div class="clerfix"></div>
+
+
+</div>
+
+
+
+<div id="wrapper-page-2">
+<div class="clerfix"></div>
+<div id="page-02">
+
+
+<div id="leftside">
+<table border="0" bordercolor="#FFCC00" style="background-color:7F7772" width="100" cellpadding="0" cellspacing="3">
+	<tr>
+		<td style="vertical-align: centre;"><img src="images/rpmicon2.jpg" alt="" /></td>
+		<td><h1>RPM Builds</h1></td>
+	</tr>
+</table>
+
+<p>
+<p>
+RPM Package Manager (RPM) was created to deliver software to workstations and servers. Besides being an efficient software delivery mechanism, RPM also provides security features that assist system administrators with managing their software and trusting the code that is going into their infrastructure.
+</p>
+<p><h2>What is an RPM?</h2></p>
+
+<p>
+RPM is a package management system that bundles software source code or binaries together for easy installation on a computer. These files are tracked and allow for easy installation, upgrading, and removal. Since the RPMs have been built specifically for the operating system and platform they are installed on, the software is expected to operate in a predictable and consistent manner.
+</p>
+<p><img src="images/rpmdeploy.png" alt="" /></p>
+<p>
+RPMs not only make it easy for the user to install software on their computer but also for the developer to deliver the software. RPMs makes it easy to pull in dependencies, other bits of code needed by the software to function properly, and to provide updates to the software in question. The ability to apply patches for security fixes makes RPMs an especially good tool for maintaining secure computer environments as code fixes can easily be verified by system administrators prior to installation.
+</p>
+<p>
+Package repositories can also be made to allow users access to a central database of software that is easily installed. The user can determine where the software originated and once installed is prompted to perform any upgrades when updates are available in the repository. The user can remove the software at any time and the RPM installer will automatically clean up the installation, preventing old versions of the software from persisting on the system, which could get used by mistake or expose the user to flaws or exploits. Removing unused software reduces potential attack vectors and because RPMs makes it easy to remove unused software, users are much more likely to do so.
+</p>
+<p><h2>Dependencies</h2></p>
+<p>
+Dependencies in RPM packages allow the inclusion of libraries in the software without including those libraries in the package itself. This has several benefits to both the maintainer of the package and the user of the software. First it makes the code base smaller, with fewer lines of code to maintain the overall package will be smaller and easier to manage. Next, there will be fewer duplications of the same software on a system. 
+</p>
+<p>
+Historically, many pieces of software would use the same library, resulting in duplicates installed on a system. Finally, there is a much lower possibility of using a library with security vulnerabilities as the library would only have to be updated once by the library writers and not in every code base that uses the library. With one update, all software using that library is instantly fixed the next time it’s run, usually without the need of rebooting the system, and without the need to modify code in all the packages using that library.
+</p>
+<p>
+A good example of the dependency problem that RPMs help fix is the many software packages that use zlib. It is unnecessary to maintain multiple installations of zlib or having zlib embedded in the source code because every piece of software installed on the system can use the same installed zlib instance. This reduces the space needed to deploy the software, reduces the maintenance for the installed software, and makes the computer safer as there will not be any old, potentially insecure versions staying installed on the system.
+</p>
+<p><h2>Patches</h2></p>
+<p>
+Enterprise systems expect software to be stable and not undergo frequent upgrades. There are times, however, when adding certain functionality or a security fix is in the best interest of the customer. This is an instance where patching becomes an important feature.
+</p>
+<p>
+Patching allows the software to have certain bugs fixed, features added, or security patches applied, without introducing the uncertainty that comes with upgrading to a completely new version of the software.
+</p>
+<p><h2>Package Signing</h2></p>
+<p>
+RPM packages can be signed using an OpenPGP key that authenticates the package’s contents as well as providing a trust link to the person or project that packaged the software. In this way you can verify that your RPM package has not been tampered with since being signed by Skysong or signed with your own keys. This is important for trusting the package as being authentic, unmodified, and coming from a trusted repository.
+</p>
+<p>
+Current skysong package signing keys are at http://www.skysong.co.uk/yum/RPM-GPG-KEY-skysong
+</p>
+<p><h2>Reproducible Builds</h2></p>
+<p>
+RPM software builds are produced according to the instructions in the RPM source package. This results in software builds that are reproducible. The system Red Hat uses to build software uses a new buildroot for each build, leading to high-quality builds that can be reproduced at a future date or by a customer.
+</p>
+
+<p><h2>Versioning</h2></p>
+<p>
+RPM packages can have a number of versioning enhancements allowing major and minor releases as well as bugfixes to all have their own versions and to be independantly installable if required.
+</p>
+
+<p><h2>What Can Skysong Do For You?</h2></p>
+<p>Skysong can provide the expertise of building and integrating RPM build systems and can help with setting up build servers, repository servers and signing processes</p>
+
+<p><li>Email: &nbsp;&nbsp;<a href="mailto:rpm.builds@skysong.co.uk?Subject=Skysong%20Systems%20Engineering">rpm.builds@skysong.co.uk</a> </li></p>
+</p>
+
+</div>
+
+
+</ul>
+
+</div>
+<div id="footer-container">
+
+<div id="footer">
+<p id="legal">Copyright &copy; 2013 skysong.co.uk. All Rights Reserved.</p>
+	
+</div>
+
+
+
+
+</div>
+</div>
+
+
+
+
+
+
+</body>
+</html>
